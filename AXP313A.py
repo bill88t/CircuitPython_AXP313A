@@ -13,11 +13,12 @@ class AXP313A:
             return False
         scan = self.i2c.scan()
         self.i2c.unlock()
-        print(scan)
         return 0x36 in scan
 
 
-    def set_power(self,DVDD,AVDDorDOVDD):
+    def set_power(self,DVDD,AVDDorDOVDD) -> bool:
+        if not self.begin():
+            return False
         state = 0x19
         ALDOData = 0
         DLDOData = 0
@@ -36,6 +37,7 @@ class AXP313A:
         sleep(0.01)
         self.WriteByte(0x17, int(DLDOData))
         sleep(0.01)
+        return True
 
     def set_shutdown_key_level_time(self,offLevelTime):
         data = offLevelTime << 1
