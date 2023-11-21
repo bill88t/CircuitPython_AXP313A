@@ -25,7 +25,9 @@ Frozen Module
 
 This driver may be shipped with some CircuitPython installations.
 
-To override the version included in your build, you can install this driver inside your board's ``/`` or ``/lib``.
+``sys.path`` by default is ``['', '/', '.frozen', '/lib']`` which means frozen modules have higher priority than modules in the local filesystem.
+To override the frozen version included in your build, you can install this driver inside your board's ``/`` or ``/lib`` and
+set `sys.path` to prefer ``/lib`` and ``/`` like ``sys.path = ['', '/', '/lib', '.frozen']``.
 
 Dependencies
 =============
