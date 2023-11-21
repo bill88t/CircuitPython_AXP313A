@@ -20,6 +20,12 @@ Introduction
 
 A CircuitPython module for managing the AXP313A pmic over I2C, along with the common voltages to power cameras with it.
 
+Frozen Module
+=============
+
+This driver may be shipped with some CircuitPython installations.
+
+To override the version included in your build, you can install this driver inside your board's ``/`` or ``/lib``.
 
 Dependencies
 =============

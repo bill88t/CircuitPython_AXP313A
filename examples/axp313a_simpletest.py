@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: 2017 Scott Shawcroft, written for Adafruit Industries
-# SPDX-FileCopyrightText: Copyright (c) 2023 Bill Sideris for Feline Computers
+# SPDX-FileCopyrightText: Copyright (c) 2023 Bill Sideris
 #
 # SPDX-License-Identifier: Unlicense
 
